@@ -2294,29 +2294,31 @@ if ReadByte(Save+0x1CFF) == 13 then --STT Removals
 		end
 	end
 else --Restore Outside STT
-	if ReadByte(Save+0x1CF1)&0x01 == 0x01 then --Dodge Roll
-		BitOr(Save+0x25D3,0x80)
-		BitNot(Save+0x1CF1,0x01)
+	if ReadByte(Sys3+0x035E1) == 0xB7 then --Better STT disabled (value is 0x93 when enabled, address is Twilight Thorn RC flag)
+		if ReadByte(Save+0x1CF1)&0x01 == 0x01 then --Dodge Roll
+			BitOr(Save+0x25D3,0x80)
+			BitNot(Save+0x1CF1,0x01)
+		end
+		WriteShort(Sys3+0x009C6,0x02) --Fire
+		WriteShort(Sys3+0x009F6,0x02) --Thunder
+		WriteShort(Sys3+0x00A26,0x02) --Blizzard
+		WriteShort(Sys3+0x00A56,0x02) --Cure
+		WriteShort(Sys3+0x015C6,0x02) --Fira
+		WriteShort(Sys3+0x015F6,0x02) --Firaga
+		WriteShort(Sys3+0x01626,0x02) --Blizzara
+		WriteShort(Sys3+0x01656,0x02) --Blizzaga
+		WriteShort(Sys3+0x01686,0x02) --Thundara
+		WriteShort(Sys3+0x016B6,0x02) --Thundaga
+		WriteShort(Sys3+0x016E6,0x02) --Cura
+		WriteShort(Sys3+0x01716,0x02) --Curaga
+		WriteShort(Sys3+0x01F26,0x02) --Magnet
+		WriteShort(Sys3+0x01F56,0x02) --Magnera
+		WriteShort(Sys3+0x01F86,0x02) --Magnega
+		WriteShort(Sys3+0x01FB6,0x02) --Reflect
+		WriteShort(Sys3+0x01FE6,0x02) --Reflera
+		WriteShort(Sys3+0x02016,0x02) --Reflega
+		WriteShort(Sys3+0x07026,0x51) --Trinity (Solo)
 	end
-	WriteShort(Sys3+0x009C6,0x02) --Fire
-	WriteShort(Sys3+0x009F6,0x02) --Thunder
-	WriteShort(Sys3+0x00A26,0x02) --Blizzard
-	WriteShort(Sys3+0x00A56,0x02) --Cure
-	WriteShort(Sys3+0x015C6,0x02) --Fira
-	WriteShort(Sys3+0x015F6,0x02) --Firaga
-	WriteShort(Sys3+0x01626,0x02) --Blizzara
-	WriteShort(Sys3+0x01656,0x02) --Blizzaga
-	WriteShort(Sys3+0x01686,0x02) --Thundara
-	WriteShort(Sys3+0x016B6,0x02) --Thundaga
-	WriteShort(Sys3+0x016E6,0x02) --Cura
-	WriteShort(Sys3+0x01716,0x02) --Curaga
-	WriteShort(Sys3+0x01F26,0x02) --Magnet
-	WriteShort(Sys3+0x01F56,0x02) --Magnera
-	WriteShort(Sys3+0x01F86,0x02) --Magnega
-	WriteShort(Sys3+0x01FB6,0x02) --Reflect
-	WriteShort(Sys3+0x01FE6,0x02) --Reflera
-	WriteShort(Sys3+0x02016,0x02) --Reflega
-	WriteShort(Sys3+0x07026,0x51) --Trinity (Solo)
 	WriteShort(Save+0x1CF9,0) --Remove stored Keyblade
 end
 --Faster Twilight Thorn Reaction Commands
