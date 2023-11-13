@@ -117,23 +117,6 @@
     {:chardelay 33 00}Not right now.
 
     {:chardelay A7 00}Visit!
-- id: 0x4ED4
-  je: >-
-    {:unk08 02 00 06}このポータルは--
-
-    トワイライトタウンにつながっているようだ。
-
-    {:chardelay 33 00}あとにしようかな……
-
-    {:chardelay A8 00}いってみよう!
-  en: >-
-    {:unk08 02 00 06}This portal leads to--
-
-    Twilight Town.
-
-    {:chardelay 33 00}Not right now.
-
-    {:chardelay A8 00}Visit!
 - id: 0x4ED5
   je: >-
     {:unk08 02 00 06}このポータルは--
@@ -202,23 +185,6 @@
     {:chardelay 33 00}Not right now.
 
     {:chardelay AC 00}Visit!
-- id: 0x4ED9
-  je: >-
-    {:unk08 02 00 06}このポータルは--
-
-    もうひとつのトワイライトタウンにつながっているようだ。
-
-    {:chardelay 33 00}あとにしようかな……
-
-    {:chardelay AD 00}いってみよう!
-  en: >-
-    {:unk08 02 00 06}This portal leads to--
-
-    Simulated Twilight Town.
-
-    {:chardelay 33 00}Not right now.
-
-    {:chardelay AD 00}Visit!
 - id: 0x4EDA
   je: >-
     {:unk08 02 00 06}このポータルは--
