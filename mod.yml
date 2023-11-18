@@ -3507,6 +3507,21 @@ assets:
     method: spawnpoint
     source:
     - name: ard/bb04/m_11.yml
+- name: ard/bb05.ard #Ballroom (Party Menu after Shadow Stalker)
+  multi:
+  - name: ard/jp/bb05.ard
+  - name: ard/us/bb05.ard
+  - name: ard/fr/bb05.ard
+  - name: ard/gr/bb05.ard
+  - name: ard/it/bb05.ard
+  - name: ard/sp/bb05.ard
+  method: binarc
+  source:
+  - name: evt
+    type: areadatascript
+    method: areadatascript
+    source:
+    - name: ard/bb05/evt.script
 - name: ard/bb06.ard #Courtyard (GoA Warp)
   multi:
   - name: ard/jp/bb06.ard
