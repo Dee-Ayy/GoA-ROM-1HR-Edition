@@ -896,12 +896,6 @@ if Place==6930 then
 	--Warp into the appropriate World, Room, Door, Map, Btl, Evt
 	Warp(18,25,0,70,70,70)
 end
-if Place == 0x1412 then  
-	WriteInt(Slot2,20000)
-	if ReadInt(XemnasHP) == 1 then
-		WriteInt(XemnasHP,0)
-		end
-	end
 end
 
 function LoD()
